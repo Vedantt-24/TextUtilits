@@ -22,12 +22,12 @@ export default function Navbar(props) {
 
                     <div className="d-flex">
                         {/* Color buttons for changing theme */}
-                        <div className="bg-primary rounded mx-2" onClick={() => { props.toggleMode('primary') }} style={{ height: '30px', width: '30px' }}></div>
-                        <div className="bg-danger rounded mx-2" onClick={() => { props.toggleMode('danger') }} style={{ height: '30px', width: '30px' }}></div>
-                        <div className="bg-success rounded mx-2" onClick={() => { props.toggleMode('success') }} style={{ height: '30px', width: '30px' }}></div>
-                        <div className="bg-warning rounded mx-2" onClick={() => { props.toggleMode('warning') }} style={{ height: '30px', width: '30px' }}></div>
-                        <div className="bg-dark rounded mx-2" onClick={() => { props.toggleMode('dark') }} style={{ height: '30px', width: '30px' }}></div>
-                        <div className="bg-light rounded mx-2" onClick={() => { props.toggleMode('light') }} style={{ height: '30px', width: '30px' }}></div>
+                        <div className="bg-primary rounded mx-2" onClick={() => { props.toggleMode('primary') }} style={{ border:'1px solid black' ,height: '30px', width: '30px' }}></div>
+                        <div className="bg-danger rounded mx-2" onClick={() => { props.toggleMode('danger') }} style={{ border:'1px solid black', height: '30px', width: '30px' }}></div>
+                        <div className="bg-success rounded mx-2" onClick={() => { props.toggleMode('success') }} style={{ border:'1px solid black', height: '30px', width: '30px' }}></div>
+                        <div className="bg-warning rounded mx-2" onClick={() => { props.toggleMode('warning') }} style={{ border:'1px solid black', height: '30px', width: '30px' }}></div>
+                        <div className="bg-dark rounded mx-2" onClick={() => { props.toggleMode('dark') }} style={{ border:'1px solid black', height: '30px', width: '30px' }}></div>
+                        <div className="bg-light rounded mx-2" onClick={() => { props.toggleMode('light') }} style={{ border:'1px solid black', height: '30px', width: '30px' }}></div>
                     </div>
 
         
@@ -41,6 +41,6 @@ export default function Navbar(props) {
 Navbar.propTypes = {
     title: PropTypes.string.isRequired,
     aboutText: PropTypes.string.isRequired,
-    // toggleMode: PropTypes.func.isRequired,  // Add this line to define toggleMode prop type
-    // mode: PropTypes.string.isRequired,      // Add this line to define mode prop type
+    toggleMode: PropTypes.func.isRequired,  // Add this line to define toggleMode prop type
+    mode: PropTypes.string.isRequired,      // Add this line to define mode prop type
 };

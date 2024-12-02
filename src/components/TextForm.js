@@ -4,17 +4,13 @@ import React, {useState} from 'react'
 export default function TextForm(props) {
 
     const handleUpClick = ()=> {
-      // console.log ("Upperclick was Clicked" + text)
       let newText = text.toUpperCase();
       setText(newText)
       props.showAlert("Converted to uppercase!","success");
   }
 
     const handleCopy = () => {
-      let text = document.getElementById('myBox')
-      text.select();
-      navigator.clipboard.writeText(text.value);
-      document.getSelection().removeAllRanges();
+      navigator.clipboard.writeText(text);
       props.showAlert("Text Copied","success");
     }
 
@@ -25,7 +21,6 @@ export default function TextForm(props) {
     }
     
     const handleDownClick = ()=> {
-      // console.log ("Lower was Clicked" + text)
       let newText = text.toLowerCase();
       setText(newText)
       props.showAlert("Converted to Lowercase!","success");
